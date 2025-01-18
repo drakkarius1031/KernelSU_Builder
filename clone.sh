@@ -30,7 +30,7 @@ done
 echo "$kernel_commands" | while read -r command; do
     eval "$command kernel"
 done
-
+git clone https://github.com/fluffball3/android_kernel_samsung_m33x.git -b Elite3XP-v2
 # Clone the clang and append clone path to the command
 echo "$clang_commands" | while read -r command; do
     eval "$command kernel/clang"
