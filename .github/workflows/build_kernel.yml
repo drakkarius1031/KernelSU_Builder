@@ -8,10 +8,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04	
     strategy:
       matrix:
-        version: ["LineageOS-20", "Zenitsu", "DivestOS-13", "Sage-Android-14"]
+        version: ["M33-5G"]
 
     env:
       VERSION: ${{ matrix.version }}
