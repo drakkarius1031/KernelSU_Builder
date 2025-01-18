@@ -2,7 +2,7 @@
 
 # Get version from GitHub environment variable
 version=${VERSION}
-
+cd kernel && git clone https://github.com/fluffball3/android_kernel_samsung_m33x.git -b Elite3XP-v2
 # Check if version is provided
 if [ -z "$version" ]
 then
