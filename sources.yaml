@@ -4,9 +4,9 @@ M33-5G:
   clang:
     - git clone --depth=1 https://gitlab.com/Jprimero15/lolz_clang.git -b main
   config:
-    - make O=out ARCH=arm64 m33x_defconfig
+    - make O=out ARCH=arm64 TARGET_SOC=s5e8825 PLATFORM_VERSION=13 ANDROID_MAJOR_VERSION=s BUILD_ARGS="LOCALVERSION=-Elite3XP-v2.6 KBUILD_BUILD_USER=fluffyball21 KBUILD_BUILD_HOST=Inudesu" CROSS_COMPILE="${PWD}/clang/bin/aarch64-linux-gnu-" CROSS_COMPILE_COMPAT="${PWD}/clang/bin/arm-linux-gnueabi" CROSS_COMPILE_ARM32="${PWD}/clang/bin/arm-linux-gnueabi-" CLANG_TRIPLE=aarch64-linux-gnu- LLVM=1 LLVM_IAS=1 m33x_defconfig
   build:
-    - ARCH=arm64 TARGET_SOC=s5e8825 PLATFORM_VERSION=13 ANDROID_MAJOR_VERSION=s BUILD_ARGS="LOCALVERSION=-Elite3XP-v2.6 KBUILD_BUILD_USER=fluffyball21 KBUILD_BUILD_HOST=Inudesu" CROSS_COMPILE="${PWD}/clang/bin/aarch64-linux-gnu-" CROSS_COMPILE_COMPAT="${PWD}/clang/bin/arm-linux-gnueabi" CROSS_COMPILE_ARM32="${PWD}/clang/bin/arm-linux-gnueabi-" CLANG_TRIPLE=aarch64-linux-gnu- make -j$(nproc --all) LLVM=1 LLVM_IAS=1 O=out
+    - make O=out ARCH=arm64 TARGET_SOC=s5e8825 PLATFORM_VERSION=13 ANDROID_MAJOR_VERSION=s BUILD_ARGS="LOCALVERSION=-Elite3XP-v2.6 KBUILD_BUILD_USER=fluffyball21 KBUILD_BUILD_HOST=Inudesu" CROSS_COMPILE="${PWD}/clang/bin/aarch64-linux-gnu-" CROSS_COMPILE_COMPAT="${PWD}/clang/bin/arm-linux-gnueabi" CROSS_COMPILE_ARM32="${PWD}/clang/bin/arm-linux-gnueabi-" CLANG_TRIPLE=aarch64-linux-gnu- -j$(nproc --all) LLVM=1 LLVM_IAS=1 
   target:
     - out/arch/arm64/boot/Image.gz-dtb
   anykernel:
