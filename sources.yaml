@@ -1,6 +1,6 @@
 M33-5G:
   kernel:
-    - git clone https://github.com/fluffball3/android_kernel_samsung_m33x.git -b Elite3XP-v2
+    - git clone https://github.com/drakkarius1031/android_kernel_samsung_m33x.git -b Elite3XP-v2
   clang:
     - git clone --depth=1 https://gitlab.com/Jprimero15/lolz_clang.git -b main
   config:
