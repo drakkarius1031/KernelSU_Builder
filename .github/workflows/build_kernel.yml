@@ -47,7 +47,12 @@ jobs:
         run: |
           chmod +x clone.sh
           ./clone.sh
-
+          
+      - name: Add KernelSU support to kernel
+        run: |
+          chmod +x kernelSU.sh
+          ./kernelSU.sh
+          
       - name: Add Clang to PATH
         run: |
           echo "${CLANG_PATH}" >> $GITHUB_PATH
